@@ -9,13 +9,38 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play tour manager.</tw-noscript></noscript></tw-story>
-<tw-storydata name="tour manager" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="62F79166-6B0C-4780-B735-40E3A7E7E0EA" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
-  background-color: #f0f6ff;
-  color: #464dab;
+<tw-storydata name="tour manager" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="62F79166-6B0C-4780-B735-40E3A7E7E0EA" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link, .enchantment-link {
+
+color:#3d94eb;
+
+}
+
+.visited {
+
+color: #ff85e0
+
+}
+
+body, tw-story
+{
+  color: #7045bf;
 }
 
 tw-sidebar { display: none; }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Beginning" tags="" position="700,300" size="100,100">Your alarm clock rips you from the peace of your slumber. You slam your hand onto tne clock, silencing the obnoxious sound as you pull the sheets off of you and swing your legs around to sit properly on the bed. 
+
+
+tw-story{
+  background-image:
+    url("https://github.com/taylania/game/blob/main/images/bg.png?raw=true");
+  background-repeat: repeat;
+    background-size: 100px 100px;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.backgroundMusic = new Audio("https://taylania.github.io/game/images/yukistheme.mp3");
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.5; // Adjust volume 0.0–1.0
+</script><tw-passagedata pid="1" name="Beginning" tags="" position="700,300" size="100,100">&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/clock.gif?raw=true&quot;&gt;
+&lt;run backgroundMusic.play()&gt;
+
+Your alarm clock rips you from the peace of your slumber. You slam your hand onto tne clock, silencing the obnoxious sound as you pull the sheets off of you and swing your legs around to sit properly on the bed. 
 
 Ever since you were able to acquire the job of managing the nation&#39;s biggest teen pop idol sensation B!LIEVE, you haven&#39;t seen so much as a wink of sleep past 6:00AM. Still, it&#39;s honest work and the job has been paying well due to their success, and today marks the first day of their concert tour.
 
@@ -24,7 +49,8 @@ For the past few months, B!LIEVE have had a complete hold on the music industry,
 
 </tw-passagedata><tw-passagedata pid="2" name=" Member Info" tags="" position="700,425" size="100,100">B!LIEVE is comprised of four widely adored members. It&#39;s hard to go anywhere without seeing merch of them or their faces plastered on billboards. Whether you&#39;re a fan or not, you know them one way or another.
 
-*(there would be a photo here)* 
+
+&lt;img src=&quot;https://raw.githubusercontent.com/taylania/game/refs/heads/main/images/blieve.png&quot;&gt;
 
 There&#39;s (text-colour:#3bc9db)[Yuki], the confident and cool heartthrob who could make any girl swoon with his natural flirtacious charm, (text-colour:#ffd43b)[Noah], the gentle and kind boy-next-door sweetheart who&#39;s known for his helpfulness and pure soul, (text-colour:#9775fa)[Victor], the athletic yet mysterious archetype who&#39;s serious, and who the others look up to. Lastly, there&#39;s (text-colour:#f783ac)[Jaiden], the cute sunshine member who&#39;s known to be incredibly energetic and a great dancer. 
 
@@ -32,7 +58,8 @@ Together, they make B!LIEVE, an incredibly devoted and hardworking group.
 
 And if you were managing B!LIEVE as the public knows and adores them, then your job would be pretty easy and exciting! [[But there&#39;s one key problem -&gt; Truth]]</tw-passagedata><tw-passagedata pid="3" name=" Truth" tags="" position="700,550" size="100,100">You&#39;re not managing B!LIEVE as the public knows them. You&#39;re managing a bunch of idiots. A bunch of idiots who, knowing them, probably havent even BEGUN to get ready for the concert tonight due to all of their collective issues. 
 
-As their manager, it&#39;s your job to visit all of their apartments to check in, get all of them ready for the concert in high spirits, and to waste as little time as you can doing it! 
+&lt;img  src= &quot;https://github.com/taylania/game/blob/main/images/nobodysready.png?raw=true&quot;&gt;
+As their manager, it&#39;s your job to visit all of their apartments to check in, get all of them ready for the concert in high spirits, and&#39;&#39; to waste as little time as you can doing it!&#39;&#39; Time is money in this world, so try to navigate the members in effective ways.
 
 Are you up to the task?
 
@@ -54,6 +81,7 @@ Whose apartment will you check on?
 [[- Victor -&gt; Victor]]
 
 [[- Jaiden -&gt; Jaiden]]]</tw-passagedata><tw-passagedata pid="5" name=" Bed" tags="" position="825,675" size="100,100">You look at the clock and pull your covers back over yourself, shutting your eyes. For twelve seconds, the thought of just not doing anything feels great! That is, until the crushing threat of being fired makes its way back into your mind again. Whether you care about idol groups or their fans, you need this job. Get out of bed.
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/bedsheet.png?raw=true&quot;&gt;&lt;/center&gt;
 
 (set: $timewasted to it+5)
 [[...Alright. -&gt; Apartment]] </tw-passagedata><tw-passagedata pid="6" name=" Yuki" tags="" position="450,775" size="100,100">(if:$yuki is true)[(text-colour:blue)[//&quot;...Manager.. I know my existence is very forgettable and miniscule and I&#39;m just a speck of dust in the grand scheme of importance, but I&#39;m um.. right here.&quot;// ]
@@ -77,8 +105,10 @@ You already checked on Noah. [[Go and check on the other members.-&gt; Apartment
 (if: $noah is false)[After a brief drive, you make your way to the apartment where the member Noah lives. 
 
 You make your way up to the door and knock. Shortly after, the door opens. The &quot; gentle and kind boy-next-door sweetheart&quot; Noah scoffs and rolls his eyes at the sight of you. 
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/noahcrashout.png?raw=true&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/center&gt;
+(text-colour:yellow)[&quot;Took you long enough. What do you want? If it&#39;s about that concert, you better be giving me more solo roles. The guy you have singing half the lead parts in our setlist trips over his own shoelaces, how do you expect that klutz to do anything right? Why is he the center of this group? &#39;Confident&#39;? What a joke. All Yucky Yuki does is //whine whine whine//. And don&#39;t think that geek and lazy guy are off the hook either, they wouldn&#39;t know what to do onstage if I wasn&#39;t there carrying every vocal performance. And as for you, Manager, you think it&#39;s cute to act all high and mighty all the time? When YOU&#39;RE the one who&#39;s late to pick ME up. I better see a chauffeur outside, because you&#39;re driving around pop idol royalty. 
 
-(text-colour:yellow)[&quot;Took you long enough. What do you want? If it&#39;s about that concert, you better be giving me more solo roles. The guy you have singing half the lead parts in our setlist trips over his own shoelaces, how do you expect that klutz to do anything right? And plus, you act all high and mighty all the time? When YOU&#39;RE the one who&#39;s late to pick ME up. I better see a chauffeur outside, because you&#39;re driving around pop idol royalty.&quot;]
+For the record, I usually like for my staff to not look so sloppy, so at least TRY to not be late AND underdressed, okay? //The gall of these people... not a shred of professionalism in sight... Don&#39;t they know who I am..? Noah Han of B!Lieve for crying out loud...//&quot;]
 
 (if:$yuki is true)[(text-colour:blue)[&quot;//Sniffle//... I didn&#39;t know he felt that way.. but he&#39;s right.. I really do trip over everything..&quot; ]]
 
@@ -141,7 +171,7 @@ You adjust your stance and place a firm kick into the door just below the lock. 
 {(set: $jaiden to false)}
 {(set: $memberscollected to 0)}
 
-{(set: $timewasted to 0)}</tw-passagedata><tw-passagedata pid="14" name="worry" tags="" position="175,1250" size="100,100">&quot;Yuki? You holding up alright bud?&quot;
+{(set: $timewasted to 0)}</tw-passagedata><tw-passagedata pid="14" name="worry" tags="" position="200,1250" size="100,100">&quot;Yuki? You holding up alright bud?&quot;
 
 (text-colour:blue)[&quot;AAAHHH-- Oh, manager..!!! Haha.. um.. yeaaaahhhh..!&quot;
 ]
@@ -156,6 +186,7 @@ Well that wasn&#39;t convincing at all. You sigh to yourself. Being &#39;confide
 (text-colour:blue)[&quot;I&#39;m terrible. I fumble all of my dance moves, I can hardly sing anything as well as any of my fellow members, and I&#39;m just gonna dissappoint all of the fans who came to see us.. All.. hundreds of thousands of them...Are people always staring at me? What am I doing with my life? Why is a nervous wreck like me an idol? If I mess up, I&#39;ll be wasting the time and effort of all of our fans and-&quot;]
 
 He continued to ramble on past this point but you started to tune him out by now. You have to do something or else he&#39;s not gonna want to go out in public let alone the concert.
+&lt;center&gt;&lt;img src=&quot;https://raw.githubusercontent.com/taylania/game/refs/heads/main/images/yukispiraling.png&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/center&gt;
 
 [[- Tell him to get a grip! -&gt; shut up yuki]]
 [[- Give him a ridiculously corny pep talk to try and lift his spirits. -&gt; talk it out]]
@@ -200,6 +231,7 @@ Nevertheless, you two have a concert to get ready for, so you and Yuki set off.
 As you glance at the clock, your heart drops into the pit of your stomach.
 
 You haven&#39;t got much time to make it... what route do you wanna take?
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/crossroad.png?raw=true&quot;&gt;&lt;/center&gt;
 
 [[- The safe but longer route. -&gt;safe route]]
 
@@ -228,19 +260,22 @@ Unfortunately, it goes in one ear and out the other. There&#39;s no reasoning wi
 
 [[- Back to the apartments -&gt; Apartment]] </tw-passagedata><tw-passagedata pid="22" name=" BAD END 1" tags="" position="1225,1025" size="100,100">With one quick swing, Noah was sprawled out onto the floor. He brought a hand to his cheek and let out an obnoxious shriek.
 
+&lt;center&gt;&lt;video width=&quot;600&quot; height=&quot;450&amp;quot;&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://taylania.github.io/game/images/noahhit.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt; &lt;/center&gt;
+
 (text-colour:yellow)[&quot;?!Why you..?! Do you have any idea who my father is?! I&#39;ll make sure you NEVER work in this industry AGAIN.&quot;]
 
 Unfortunately, you //do// have an idea who Noah&#39;s father is. Your boss. Although it felt cathartic to finally put an end to that nepobaby berating everyone around him, shockingly your boss didn&#39;t take well to his son catching your hands. You do indeed have to find a new job now.
 
 
 &#39;&#39;BAD END. (1/5)&#39;&#39;
-
 </tw-passagedata><tw-passagedata pid="23" name=" Victor&#39;s room" tags="" position="600,1200" size="100,100">After finally entering the room, your worst fears are confirmed. Anime girl merchandise lines every centimeter of all four walls. Even the blackout curtains that don&#39;t even let a shred of light escape into here are covered in banners and pins. Your eyes trail down to Victor, who&#39;s hunched over his desk clicking frantically. Cups and plates line the table in a stack that would be impressive if it wasn&#39;t so terrifying.
 
 All of the dots connect in your head in an instant: he&#39;s a gacha gamer. He notices you and takes his headset off, stopping his yelling directed towards whoever he was talking to in his game.
 
 (if:$jaiden is true)[(text-colour:#f783ac)[&quot;Not gonna lie this is a little weird..&quot; ]]
-
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/victornerdingout.png?raw=true&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/center&gt;
 (text-colour:purple)[&quot;Oh, manager, heeeyyy! What&#39;s up? Are you bringing my paycheck? Great, cause I have got to get the SSR ultra rare costume that dropped in the most recent patch for my favorite 2D girl Elisa! Heh, usually I go F2P, but if I spend a little cash, I&#39;ll only have to grind 9 hours as opposed to 24 like the usual.&quot;]
 
 You remind him of the concert tonight. He looks at his calendar and sucks in air through his teeth sharply. 
@@ -284,7 +319,7 @@ However, that&#39;s all he&#39;s willing to hear you out on. Your thoughts on hi
 {(set: $timewasted to it+10)}
 
 [[- Back to the apartments -&gt; Apartment]] </tw-passagedata><tw-passagedata pid="27" name=" jaidens room" tags="" position="900,1200" size="100,100">You open up the door and catch a glimpse of the apartment. Weirdly enough, theres a bed where the living room should be and in the middle lays Jaiden. Fully asleep. Who puts their bed in the living room anyway, that&#39;s not normal!
-
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/jaidensnooze.png?raw=true&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/center&gt;
 He&#39;s out cold. What do you want to do?
 
 
@@ -294,7 +329,7 @@ He&#39;s out cold. What do you want to do?
 
 He rolls over and mumbles, &quot;Five more minutes..&quot;
 {(set: $timewasted to it+15)}
-
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/SNOOZE.gif?raw=true&quot; width=&quot;550&quot; height=&quot;400&quot;&gt;&lt;/center&gt;
 [[- I gotta try something else. -&gt; jaidens room]] </tw-passagedata><tw-passagedata pid="29" name="roll" tags="" position="1025,1325" size="100,100">You decide to take the bedsheet he&#39;s laying on and roll him up in it, lugging the roll over your shoulder, taking it with you. If he wants to sleep, he can sleep on the way to the venue, but he better be up by then.
 
 {(set: $jaiden to true)}
@@ -315,16 +350,27 @@ Why did you think this would work?
 [[To the concert! -&gt;concert]]]
 (elseif:$event is 2)[Unfortunately, because you didn&#39;t check the news this morning, you weren&#39;t aware of a mass spilling of banana peels on the road today. As you sped through them, the entire car went out of control and ended up catapulting off the guard rails and into a tree! Everyone was fine, but by the time firefighters were able to reach everyone, the concert was long over... 
 
-&#39;&#39;BAD END (2/5)&#39;&#39; ]
+&#39;&#39;BAD END (2/5)&#39;&#39; 
+]
 (elseif:$event is 3)[As you begin to take the riskier route, everything seems fine until you become increasingly aware of your slowing speed. The car slows to a full stop, and to the dismay of you and the idols in your back seat, it wont budge. You step out of the car to take a look at the damage and by the looks of it, your tires have been messed with. Before you can even wonder who the culprit is, Victor points out a message spray painted onto the back of the car. &#39;MAY THE BEST BAND WIN - NOVA5.&#39;
 
 Of course this was the work of B!LIEVE&#39;S biggest rival band NOVA5. They&#39;ll stop at nothing to stay at the top, including ruining your big concert. 
 
-&#39;&#39;BAD END (3/5)&#39;&#39;]</tw-passagedata><tw-passagedata pid="33" name="concert" tags="" position="1500,1750" size="100,100">(if: $timewasted&gt;70)[Now that everyone&#39;s here, and after one last brief pep talk, you come to realize... the concert time has already ended and everyone has gone home. You really needed to manage your time better. Now the idols are sad they couldn&#39;t perform, and the fans are sad they couldn&#39;t get a performance.
+&lt;center&gt;&lt;img src=&quot;https://github.com/taylania/game/blob/main/badendnova5.gif?raw=true&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/center&gt;
+&#39;&#39;BAD END (3/5)&#39;&#39;
+ ]</tw-passagedata><tw-passagedata pid="33" name="concert" tags="" position="1500,1750" size="100,100">(if: $timewasted&gt;69)[Now that everyone&#39;s here, and after one last brief pep talk, you come to realize... the concert time has already ended and everyone has gone home. You really needed to manage your time better. Now the idols are sad they couldn&#39;t perform, and the fans are sad they couldn&#39;t get a performance.
 
-&#39;&#39;BAD END (4/5)&#39;&#39;]
+&#39;&#39;BAD END (4/5)&#39;
 
-(if: $timewasted&lt;70)[Great job with time management! Everyone had enough time for hair, makeup, costumes, and even had time to practice the setlist! The concert went great and the fans loved every second of it. Even the guys were able to liven up and have fun. They may be a lot of trouble, but they really do love what they do.
+]
+
+(if: $timewasted&lt;69)[Great job with time management! Everyone had enough time for hair, makeup, costumes, and even had time to practice the setlist! The concert went great and the fans loved every second of it. Even the guys were able to liven up and have fun. 
+
+Even though not everyone gets along just yet, they&#39;re still able to put on a great show for the fans. After all, isn&#39;t being an idol partially about selling the look of perfect personalities, dynamics, and music?
+
+They may be a lot of trouble, but they all are united by the fact that they really do love what they do and the fans who support them. They all can learn a lot from one another, so let&#39;s strive to help everyone get along backstage too by next concert! Are you up to the task, Manager?
+
+&lt;img src=&quot;https://github.com/taylania/game/blob/main/images/good%20end%20yay.png?raw=true&quot;&gt;
 
 &#39;&#39;GOOD END (5/5)&#39;&#39;]
 </tw-passagedata></tw-storydata>
